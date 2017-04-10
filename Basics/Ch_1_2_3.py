@@ -6,7 +6,7 @@ def payroll():
     rate = raw_input("Enter your hourly rate: ")
 
     try:
-        if float(hours) <= 0:
+        if float(hours) <= 0 or float(rate) <= 0:
             raise ValueError
         elif float(hours) > 160:
             payment = float(rate) * 160 + (float(hours) - 160) * float(rate) * 1.5
