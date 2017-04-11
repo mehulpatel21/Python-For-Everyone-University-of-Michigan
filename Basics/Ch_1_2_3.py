@@ -2,12 +2,15 @@
 
 
 def payroll():
+    # User input
     hours = raw_input("Enter your monthly hours: ")
     rate = raw_input("Enter your hourly rate: ")
 
+    # Try and Except
     try:
-        if float(hours) <= 0 or float(rate) <= 0:
-            raise ValueError
+        # Conditional statements
+        if float(hours) <= 0 or float(rate) <= 0:  # Type conversion
+            raise ValueError  # raising exception
         elif float(hours) > 160:
             payment = float(rate) * 160 + (float(hours) - 160) * float(rate) * 1.5
         elif float(hours) < 60:
