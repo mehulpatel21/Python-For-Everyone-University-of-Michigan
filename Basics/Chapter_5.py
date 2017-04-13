@@ -30,6 +30,8 @@ for number in [9,41,10,12,45]:
 print "After", smallest
 
 
+# Book exercises
+
 def ch5_exe1():
     count = 0
     total = 0
