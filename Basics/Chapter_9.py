@@ -23,7 +23,7 @@ for key, value in counts.items():
 
 
 def count_most_common_words():
-    fname = raw_input("Enter file name: ")
+    fname = input("Enter file name: ")
     fhand = open(fname, 'r')
     lines = fhand.read()
     texts = lines.split()
@@ -40,15 +40,15 @@ def count_most_common_words():
             most_common_word = Word
             most_common_word_count = Count
 
-    print most_common_word, most_common_word_count
+    print(most_common_word, most_common_word_count)
 
 
 def count_words_from_original_romeo():
-    fname = raw_input("Enter file name: ")
+    fname = input("Enter file name: ")
     try:
         fhand = open(fname)
     except IOError:
-        print "File ", fname, " doesn't exist."
+        print("File ", fname, " doesn't exist.")
         exit()
 
     counts = dict()
@@ -59,18 +59,18 @@ def count_words_from_original_romeo():
         for word in words:
             counts[word] = counts.get(word, 0) + 1
 
-    print counts
+    print(counts)
 
 
 #count_words_from_original_romeo()
 
 
 def ch9_exe2():
-    fname = raw_input("Enter file name: ")
+    fname = input("Enter file name: ")
     try:
         fhand = open(fname)
     except IOError:
-        print "File is not valid...", fname
+        print("File is not valid...", fname)
         exit()
 
     counts = dict()
@@ -80,18 +80,18 @@ def ch9_exe2():
             continue
         line = line.split()
         counts[line[2]] = counts.get(line[2], 0) + 1
-    print counts
+    print(counts)
 
 
 #ch9_exe2()
 
 
 def ch9_exe3():
-    fname = raw_input("Enter file name: ")
+    fname = input("Enter file name: ")
     try:
         fhand = open(fname)
     except IOError:
-        print "File is not valid...", fname
+        print("File is not valid...", fname)
         exit()
 
     counts = dict()
@@ -101,18 +101,18 @@ def ch9_exe3():
             continue
         line = line.split()
         counts[line[1]] = counts.get(line[1], 0) + 1
-    print counts
+    print(counts)
 
 
 #ch9_exe3()
 
 
 def ch9_exe4():
-    fname = raw_input("Enter file name: ")
+    fname = input("Enter file name: ")
     try:
         fhand = open(fname)
     except IOError:
-        print "File is not valid...", fname
+        print("File is not valid...", fname)
         exit()
 
     counts = dict()
@@ -128,18 +128,18 @@ def ch9_exe4():
             if max_value is None or value > max_value:
                 max_value = value
                 max_key = key
-    print max_key, max_value
+    print(max_key, max_value)
 
 
 #ch9_exe4()
 
 
 def ch9_exe5():
-    fname = raw_input("Enter file name: ")
+    fname = input("Enter file name: ")
     try:
         fhand = open(fname)
     except IOError:
-        print "File is not valid...", fname
+        print("File is not valid...", fname)
         exit()
 
     counts = dict()
@@ -151,7 +151,7 @@ def ch9_exe5():
         email = line[1]
         email_domain = email.split('@')
         counts[email_domain[1]] = counts.get(email_domain[1], 0) + 1
-    print counts
+    print(counts)
 
 
 ch9_exe5()

@@ -1,33 +1,33 @@
 largest_so_far = -1
-print "Before", largest_so_far
+print ("Before", largest_so_far)
 
 for number in [100,200,300,400,500]:
     if number > largest_so_far:
         largest_so_far = number
-    print "largest right now", largest_so_far, "current number", number
+    print ("largest right now", largest_so_far, "current number", number)
 
-print "After", largest_so_far
+print ("After", largest_so_far)
 
 
 found = False
-print "Before", found
+print ("Before", found)
 for number in [10,3,40,2,21]:
     if number == 100:
         found = True
-    print found, number
+    print (found, number)
 
-print "After", found
+print ("After", found)
 
 
 smallest = None
-print "Before"
+print ("Before")
 for number in [9,41,10,12,45]:
     if smallest is None:
         smallest = number
     elif number < smallest:
         smallest = number
-    print smallest, number
-print "After", smallest
+    print (smallest, number)
+print ("After", smallest)
 
 
 # Book exercises
@@ -36,7 +36,7 @@ def ch5_exe1():
     count = 0
     total = 0
     while True:
-        user_input = raw_input("Enter a number: ")
+        user_input = input("Enter a number: ")
 
         if user_input == 'done':
             break
@@ -46,14 +46,14 @@ def ch5_exe1():
         try:
             value = float(user_input)
         except ValueError:
-            print "Non numeric value entered!"
+            print ("Non numeric value entered!")
             continue
 
         count = count + 1
         total = value + total
-        print value, total, count
+        print (value, total, count)
 
-    print "Average:", total/count
+    print ("Average:", total/count)
 
 
 def ch5_exe2():
@@ -61,7 +61,7 @@ def ch5_exe2():
     maximum = -1
     while True:
 
-        user_input = raw_input("Enter a number: ")
+        user_input = input("Enter a number: ")
 
         if user_input == 'done':
             break
@@ -71,7 +71,7 @@ def ch5_exe2():
         try:
             value = float(user_input)
         except ValueError:
-            print "Non numeric value entered!"
+            print ("Non numeric value entered!")
             continue
 
         if minimum is None:
@@ -81,7 +81,7 @@ def ch5_exe2():
         elif value > maximum:
             maximum = value
 
-    print minimum, maximum
+    print (minimum, maximum)
 
 
 ch5_exe1()

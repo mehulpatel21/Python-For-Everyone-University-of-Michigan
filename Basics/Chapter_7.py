@@ -1,24 +1,24 @@
 def ch7_exe1():
-    fname = raw_input("Enter the file name: ")
+    fname = input("Enter the file name: ")
     try:
         fhand = open(fname)
     except IOError:
-        print "File can't be opened", fname
+        print ("File can't be opened", fname)
         exit()
 
     for line in fhand:
         line = line.rstrip().upper()
-        print line
+        print (line)
 
 
 def ch7_exe2():
-    fname = raw_input("Enter the file name: ")
+    fname = input("Enter the file name: ")
     linecount = 0
     spamconfidence = 0
     try:
         fhand = open(fname)
     except IOError:
-        print "File can't be opened", fname
+        print ("File can't be opened", fname)
         exit()
     for line in fhand:
         if not line.startswith('X-DSPAM-Confidence:'):
@@ -29,28 +29,28 @@ def ch7_exe2():
         linecount = linecount + 1
         spamconfidence = spamconfidence + confstring
 
-    print "Average Spam Confidence: ", spamconfidence/linecount
+    print ("Average Spam Confidence: ", spamconfidence/linecount)
 
 
 def ch7_exe3():
-    fname = raw_input("Enter the file name: ")
+    fname = input("Enter the file name: ")
     count = 0
     try:
         if fname == 'na na boo boo':
-            print "NA NA BOO BOO TO YOU - You've been punk'd!"
+            print ("NA NA BOO BOO TO YOU - You've been punk'd!")
             exit()
 
         fhand = open(fname)
 
     except IOError:
-        print "File can't be opened", fname
+        print ("File can't be opened", fname)
         exit()
 
     for line in fhand:
         if line.startswith('Subject:'):
             count = count+1
 
-    print "There were", count, " Subject lines in", fname
+    print ("There were", count, " Subject lines in", fname)
 
 
 

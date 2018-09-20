@@ -21,18 +21,19 @@ def score_card(score):
         else:
             return "F"
 
+
 try:
-    h = raw_input("Enter monthly worked hours: ")
-    r = raw_input("Enter your hourly rate: ")
-    sc = raw_input("Enter the score: ")
+    h = input("Enter monthly worked hours: ")
+    r = input("Enter your hourly rate: ")
+    sc = input("Enter the score: ")
     sc = float(sc)
 
     if h < 0 or r < 0 or sc > 1.0:
         raise ValueError
     else:
-        print "Payment is:", compute_pay(h, r), "$"
-        print "Score is:", score_card(sc)
+        print("Payment is:", compute_pay(h, r), "$")
+        print("Score is:", score_card(sc))
 
 except ValueError:
-    print "BAD!!!! Enter valid arguments!!!!"
+    print("BAD!!!! Enter valid arguments!!!!")
 

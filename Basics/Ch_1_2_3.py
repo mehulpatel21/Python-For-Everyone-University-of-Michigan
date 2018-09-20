@@ -3,8 +3,8 @@
 
 def payroll():
     # User input
-    hours = raw_input("Enter your monthly hours: ")
-    rate = raw_input("Enter your hourly rate: ")
+    hours = input("Enter your monthly hours: ")
+    rate = input("Enter your hourly rate: ")
 
     # Try and Except
     try:
@@ -17,10 +17,11 @@ def payroll():
             payment = float(rate) * 0.80 * float(hours)
         else:
             payment = float(rate) * float(hours)
-        print "Your monthly payment is: $", payment
+        print ("Your monthly payment is: $", payment)
 
     except ValueError:
-        print "Error, please enter valid arguments."
+        print ("Error, please enter valid arguments.")
 
 
 payroll()
+exit(0)
